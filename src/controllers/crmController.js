@@ -39,3 +39,32 @@ export const getContactWithId = async (req, res) => {
     }
 }
 
+export const updateContact = async (req, res) => {
+    try {
+        const contact = await Contact.findOneAndUpdate(
+            { _id: req.params.contactId }
+            , req.body,
+            {
+                new: true
+            })
+        res.json(contact)
+    } catch (err) {
+        res.status(500).json({
+            error: err.message
+        })
+    }
+}
+
+
+export const deleteContactWithId = async (req, res) => {
+    try {
+        await Contact.deleteOne(req.params.contactId)
+        res.json(contact)
+    } catch (err) {
+        res.status(500).json({
+            error: err.message
+        })
+    }
+}
+
+
