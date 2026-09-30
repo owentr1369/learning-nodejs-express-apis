@@ -1,0 +1,24 @@
+{
+  "name": "learning-nodejs-express-apis",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/owentr1369/learning-nodejs-express-apis#readme",
+  "bugs": {
+    "url": "https://github.com/owentr1369/learning-nodejs-express-apis/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owentr1369/learning-nodejs-express-apis.git"
+  },
+  "license": "ISC",
+  "author": "TranTam",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.10.3"
+  }
+}
