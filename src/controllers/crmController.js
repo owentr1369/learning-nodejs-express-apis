@@ -27,3 +27,15 @@ export const getContacts = async (req, res) => {
         })
     }
 }
+
+export const getContactWithId = async (req, res) => {
+    try {
+        const contact = await Contact.findById(req.params.contactId)
+        res.json(contact)
+    } catch (err) {
+        res.status(500).json({
+            error: err.message
+        })
+    }
+}
+
