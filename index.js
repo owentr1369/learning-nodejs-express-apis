@@ -13,6 +13,8 @@ mongoose.connect("mongodb://localhost/CRMdb")
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+// Serving static files
+app.use(express.static('public'))
 
 routes(app)
 
