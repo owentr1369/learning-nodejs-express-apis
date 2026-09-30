@@ -58,8 +58,12 @@ export const updateContact = async (req, res) => {
 
 export const deleteContactWithId = async (req, res) => {
     try {
-        await Contact.deleteOne(req.params.contactId)
-        res.json(contact)
+        await Contact.deleteOne({
+            _id: req.params.contactId
+        })
+        res.json({
+            message: "Contact deleted successfully!"
+        })
     } catch (err) {
         res.status(500).json({
             error: err.message
